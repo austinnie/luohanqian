@@ -1,0 +1,72 @@
+<view class="container">
+  <!-- 顶部状态栏 -->
+  <view class="status-bar">
+    <text>22:23</text>
+    <text>100%</text>
+  </view>
+
+  <!-- 标题区域 -->
+  <view class="header">
+    <text class="title">罗汉签占卜</text>
+    <text class="subtitle">点击上方莲花诚心求签</text>
+  </view>
+
+  <!-- 求签区域 -->
+  <view class="draw-area">
+    <image 
+      src="/images/lotus.png" 
+      class="lotus" 
+      animation="{{animationData}}"
+      bindtap="startDraw"
+    />
+  </view>
+
+  <!-- 签文结果 -->
+  <view class="result-container" wx:if="{{sign}}">
+    <view class="sign-header">
+      <text class="sign-number">{{sign.id}}</text>
+      <text class="sign-luck {{getLuckClass(sign.luck)}}">
+        {{sign.luckText || '未知签运'}}
+      </text>
+    </view>
+
+    <view class="sign-content">
+      <view class="section">
+        <text class="section-title">签诗</text>
+        <text class="section-content">{{sign.poem}}</text>
+      </view>
+
+      <view class="section">
+        <text class="section-title">总判</text>
+        <text class="section-content">{{sign.summary}}</text>
+      </view>
+
+      <!-- 详细解析切换 -->
+	<view class="toggle-details" bindtap="toggleDetails">
+	  <text>{{showDetails ? '收起详细解签' : '查看详细解签'}}</text>
+	  <view class="toggle-icon {{showDetails ? 'up' : 'down'}}"></view>
+	</view>
+
+      <!-- 详细解析内容 -->
+      <view class="analysis-section" wx:if="{{showDetails}}">
+        <view class="analysis-grid">
+          <view 
+            class="analysis-item" 
+            wx:for="{{analysisItems}}" 
+            wx:key="key"
+          >
+            <text class="analysis-title">{{item.title}}：</text>
+            <text class="analysis-content">
+              {{sign.analysis[item.key] || '暂无具体解签'}}
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons" wx:if="{{sign}}">
+    <button class="draw-again-btn" bindtap="drawAgain">再抽一次</button>
+  </view>
+</view>

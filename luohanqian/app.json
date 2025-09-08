@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/draw/draw",
+    "pages/history/history",
+	"pages/signDetail/signDetail",
+	"pages/about/about"
+  ],
+  "window": {
+    "navigationBarTitleText": "罗汉签占卜",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTextStyle": "black"
+  }
+}
