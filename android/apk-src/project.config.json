@@ -1,0 +1,52 @@
+{
+  "setting": {
+    "preprocess": {
+      "copy": [
+        {
+          "from": "./assets/SaaA_embed/README.md",
+          "to": "./miniprogram/assets/SaaA_embed/README.md"
+        }
+      ]
+    },	  
+    "condition": true,
+    "minifyJS": true,
+    "minifyWXML": true,
+    "es6": true,  
+    "postcss": true,  
+    "compileWorklet": false,
+    "minified": true, 
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "enhance": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "swc": false,
+    "disableSWC": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "nativeResources": {
+      "assets": "./assets"
+    }	
+  },
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "projectArchitecture": "multiPlatform",
+  "packOptions": {
+    "ignore": [],
+    "include": [
+      {
+        "type": "file",
+        "value": "./miniprogram/assets/SaaA_embed/README.md"
+      }
+    ]
+  },
+  "appid": "wx86b32b1a487963c7",
+  "editorSetting": {}
+}
