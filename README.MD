@@ -60,7 +60,7 @@ luohanqian/
 
 | 版本 | 入口 | 说明 |
 |------|------|------|
-| 🌐 **Web 版** | https://你的用户名.github.io/luohanqian/luohanqian-web/ | 浏览器直接打开，无需安装 |
+| 🌐 **Web 版** | https://austinnie.github.io/luohanqian/web/index.html | 浏览器直接打开，无需安装 |
 | 📱 **微信小程序** | 微信搜索"罗汉签"或扫码 | 小程序内体验 |
 | 📦 **Android APK** | [Releases 下载](https://github.com/你的用户名/luohanqian/releases) | 安装到手机使用 |
 | 🐍 **Python 版** | `python luohanqian_divination.py` | 终端命令行运行 |
